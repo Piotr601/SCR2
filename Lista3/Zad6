@@ -1,3 +1,5 @@
+Piotr Niedziolka 249023
+
 Po zawieszeniu procesu poprzez komende SIGSTOP mozna ja wznowic komenda SIGCONT.
 Po uruchomieniu EMACSA i wyjsciu z niego poprzez CTR+Z proces ten tak jak poprzedni
 zamkniety SIGSTOP byl zatrzymany. Polecenie SIGCONT daje podobny efekt jak polecenie fg
