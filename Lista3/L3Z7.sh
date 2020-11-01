@@ -7,6 +7,8 @@ do
   k=$[i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i]
 done
 
+# Piotr Niedziółka 249023
+#
 # Napisano powyzszy zasobozerny skrypt, a nastepnie odpalono 5 skryptow.
 # Ustawiono im wartosc nice na rozne tj: (-19, -5, 0, 6, 19). Po wpisaniu
 # komendy htop lub top (osobiscie korzystalem z tej pierwszej) mozna bylo
