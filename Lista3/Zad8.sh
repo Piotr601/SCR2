@@ -5,6 +5,8 @@ do
    ./Zad8.sh
 done
 
+# Piotr Niedziolka 249023
+#
 # Ustawiono limit na 1 000 procesow i nastepnie uruchomiono skrypt w
 # terminalu. Po zapelnieniu sie wszystkich miejsc przez procesy, zaczely
 # wystepowac bledy w terminalu mowiace o braku miejsca dla kolejnych procesow.
