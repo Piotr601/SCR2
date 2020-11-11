@@ -1,0 +1,39 @@
+ ----  man proc ----
+
+//
+Jest to wirtualny system plikow, ktory pozwala na komunikacje z jadrem systemu, przez interfejs.
+Wystepuje to tylko i wylacznie w pamieci operacyjnej komputera.
+
+Jest to montowane w katalogu /proc
+
+Jego zawartosc jest generowana automatycznie, reprezentuje stan w chwili odczytu.
+
+Dzieki niemu mozna odczytac dane o procesach, kazdy z nich ma swoj wlasny (PID),
+mozna zapisywac dane, zmieniac je ( NIE WSZYSTKIE ).
+
+Dzieki formie txt mozna to odczytac podstawowymi narzedziami, np. cat, emacs.
+//
+
+Komenda proc daje nam informacje o pseudo plikach systemowych (a takze wirtualnym systemie).
+Sa tu zawarte najwazniejsze informacje, takie jak: pamiec systemowa, konfiguracja komputera.
+
+Skroty w /proc/PID
+
+cmdline - commandline argumenty
+cpu 
+cwd - current working directory
+environ - zmienne srodowiskowe (environment variables)
+fd - file descriptors
+maps - maps to executables and library files
+mem - memory held
+stat - status
+status - status systemu
+
+Skroty w proc/
+
+cmdline - kernel command line
+cpuinfo
+devices - lista urzadzen
+driver - sterowniki ...
+filesystems - pliki systemowe, konfiguracyjne, wspierajace
+interrupts - przerrwania
