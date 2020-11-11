@@ -1,0 +1,14 @@
+Zbadano otwarte pliki kazdego z procesow uzestniczacych w potoku (zdj)
+Mozna zobaczyc i zobrazowac kolejnosc w sposob jaki wystepowane w
+potoku polecenia sa wykonane. Dzieje sie tak, gdyz mozna zobaczyc co
+przechodzi przez pipe.
+
+Zrobiono to komendami:
+sudo -i
+
+cd /proc/[pid]/fd/ i wyswietlono zawartosc
+
+PID sprawdzono przy pomocy ps -a
+
+fd to komenda odpowiadajaca za wyswietlenie sciezki, zawierajaca
+   wszystkie przejscia pliku
