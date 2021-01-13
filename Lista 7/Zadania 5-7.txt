@@ -1,0 +1,34 @@
+Rozszerzone
+
+--- ZADANIE 5 ---
+Aby były zwracane różne wartości należy coś zmienić w linii: result = result + sin(i) * tan(i). Albowiem dotychczas program cały czas zlicza wszystko tak samo. Aby to zmienić, można dodać zmienną pomocniczą, która będzie się zwiększała co wykonanie się wątku. Można również dodać, by w resulcie zmieniało się w zależności od wykonywanego wątku np. "tid" lub dodać losową liczbę.
+
+Może to na przykład wyglądać tak:
+
+result = result + sin(i) * tan(i) + rand();
+
+Zarówno w jednym jak i w drugim programie wątki najpierw się tworzą, potem startują i się wykonują. W programie join.c jest jednak jedna różnica, wątki czekają, aż wszystkie się wykonają i dopiero później kończy się program.
+
+Zasadniczą róznicą pomiędzy nimi jest to, że:
+w join.c wątek czeka, dopóki nie zostanie zwrócona wartość dla wątku przez join(), a detach.c kontynuje swoją pracę, nawet jeżeli wątek przestanie istnieć, dzieje się tak, ponieważ przyłącza nowo utworzony wątek do rodzica
+
+--- ZADANIE 6 ---
+W programie występuje brak miejsca na stosie, przez co wyświetla się błąd "Segmentation Fault".
+Aby to naprawić przeanalizowanio program bug2fix.c, a następnie zmieniono w programie bug2.c:
+
+Dodano:
+ stacksize=sizeof(double)*ARRAY_SIZE*MEGEXTRA;
+ pthread_attr_setstacksize (&attr, stacksize);
+ pthread_attr_getstacksize (&attr, &stacksize);
+
+,gdzie
+MEGEXTRA = 200
+
+Zmieniono:
+ rc = pthread_create(&threads[t], &attr, Hello, (void *)t);
+
+W takim układzie program wykonuje się prawidłowo. Należy jednak uważać, by liczba podana w MEGEXTRA nie była zbyt duża, albowiem wtedy występuje błąd:
+ERROR; return code from pthread_create() is 11.
+
+--- ZADANIE 7 ---
+Skorzystano z gotowego progamu hello32.c, a następnie go przerobiono.
